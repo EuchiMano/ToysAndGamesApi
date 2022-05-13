@@ -1,0 +1,17 @@
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.DataAccess.deps.json
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.DataAccess.runtimeconfig.json
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.DataAccess.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.DataAccess.pdb
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.Model.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\bin\Debug\net6.0\ToysAndGames.Model.pdb
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.csproj.AssemblyReference.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.AssemblyInfoInputs.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.AssemblyInfo.cs
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.csproj.CopyComplete
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\refint\ToysAndGames.DataAccess.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.pdb
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ToysAndGames.DataAccess.genruntimeconfig.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.DataAccess\obj\Debug\net6.0\ref\ToysAndGames.DataAccess.dll

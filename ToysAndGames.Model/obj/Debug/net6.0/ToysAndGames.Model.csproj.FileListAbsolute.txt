@@ -1,0 +1,12 @@
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\bin\Debug\net6.0\ToysAndGames.Model.deps.json
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\bin\Debug\net6.0\ToysAndGames.Model.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\bin\Debug\net6.0\ToysAndGames.Model.pdb
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.csproj.AssemblyReference.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.AssemblyInfoInputs.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.AssemblyInfo.cs
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.csproj.CoreCompileInputs.cache
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\refint\ToysAndGames.Model.dll
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ToysAndGames.Model.pdb
+C:\Users\marcelo.pereyra\source\repos\ToysAndGames.Api\ToysAndGames.Model\obj\Debug\net6.0\ref\ToysAndGames.Model.dll
