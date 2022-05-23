@@ -4,7 +4,7 @@
 
 namespace ToysAndGames.DataAccess.Migrations
 {
-    public partial class initialcreate : Migration
+    public partial class initalcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,8 @@ namespace ToysAndGames.DataAccess.Migrations
                     Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     AgeRestriction = table.Column<int>(type: "int", nullable: true),
                     Company = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,6 +27,21 @@ namespace ToysAndGames.DataAccess.Migrations
                     table.CheckConstraint("CK_Products_AgeRestriction", "[AgeRestriction] >= 0 AND [AgeRestriction] <= 100");
                     table.CheckConstraint("CK_Products_Price", "[Price] >= 1 AND [Price] <= 1000");
                 });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "AgeRestriction", "Company", "Description", "Image", "Name", "Price" },
+                values: new object[] { 1, 12, "Mattel", "Lorem impsum...", null, "Barbie Developer", 25.99m });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "AgeRestriction", "Company", "Description", "Image", "Name", "Price" },
+                values: new object[] { 2, 4, "Marvel", null, null, "xyc", 75.50m });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "AgeRestriction", "Company", "Description", "Image", "Name", "Price" },
+                values: new object[] { 3, 18, "Nintendo", null, null, "abc", 99.99m });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

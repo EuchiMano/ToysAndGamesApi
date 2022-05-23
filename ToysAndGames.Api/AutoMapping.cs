@@ -9,6 +9,7 @@ namespace ToysAndGames.Api
         public AutoMapping()
         {
             CreateMap<CreateProductCommand, Product>();
+            CreateMap<UpdateProductCommand, Product>();
         }
     }
 }

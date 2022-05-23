@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ToysAndGames.DataAccess.Data;
+using ToysAndGames.Model;
 using ToysAndGames.Model.Interfaces;
 
 namespace ToysAndGames.DataAccess.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         protected readonly ApplicationDbContext _context;
 
@@ -20,21 +21,27 @@ namespace ToysAndGames.DataAccess.Repositories
             return entity;
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        
-
-        public Task<T> UpdateAsync(T entity)
+        public async Task<T> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(a => a.Id == id);
+        }
+
+        public async Task<T> UpdateAsync(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
     }
 }

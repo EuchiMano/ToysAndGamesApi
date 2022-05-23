@@ -16,6 +16,7 @@ namespace ToysAndGames.DataAccess.FluentConfig
             builder.Property(p => p.Company).IsRequired().HasMaxLength(50);
             builder.Property(p => p.Price).IsRequired();
             builder.HasCheckConstraint("CK_Products_Price", "[Price] >= 1 AND [Price] <= 1000");
+            builder.HasData(SeedData.Products());
         }
     }
 }

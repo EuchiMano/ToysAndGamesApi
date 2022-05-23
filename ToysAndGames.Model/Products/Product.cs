@@ -1,12 +1,12 @@
 ﻿namespace ToysAndGames.Model.Products
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         public string? Description { get; set; }
         public int? AgeRestriction { get; set; }
-        public string Company { get; set; }
+        public string Company { get; set; } = null!;
         public decimal Price { get; set; }
+        public string? Image { get; set; }
     }
 }

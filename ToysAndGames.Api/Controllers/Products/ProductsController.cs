@@ -18,19 +18,39 @@ namespace ToysAndGames.Api.Controllers.Products
             _mapper = mapper;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> PostProduct([FromBody] CreateProductCommand command)
+        [HttpPost("/api/[controller]/")]
+        public async Task<IActionResult> PostProduct([FromBody] CreateProductCommand request)
         {
-            var newProduct = _mapper.Map<Product>(command);
-            var newProductCreated = await _productRepository.CreateAsync(newProduct);
-            return Ok(newProductCreated);
+            var newProduct = _mapper.Map(request, new Product());
+            await _productRepository.CreateAsync(newProduct);
+            return Ok(newProduct);
         }
 
-        [HttpGet("/api/[controller]/{productId}")]
-        public async Task<IActionResult> GetProductById([FromRoute] int productId)
+        [HttpGet("/api/[controller]/")]
+        public async Task<IActionResult> GetProducts()
         {
-            var productFound = await _productRepository.GetById(productId);
-            if(productFound is null) return NotFound();
+            var productFound = await _productRepository.GetAll();
+            return Ok(productFound);
+        }
+
+        [HttpDelete("/api/[controller]/{productId}")]
+        public async Task<IActionResult> DeleteProductById([FromRoute] int productId)
+        {
+            var productFound = await _productRepository.GetByIdAsync(productId);
+            if (productFound is null) return NotFound(productId);
+
+            await _productRepository.DeleteAsync(productFound);
+            return NoContent();
+        }
+
+        [HttpPut("/api/[controller]")]
+        public async Task<IActionResult> UpdateProductById([FromBody] UpdateProductCommand request)
+        {
+            var productFound = await _productRepository.GetByIdAsync(request.Id);
+            if (productFound is null) return NotFound();
+
+            _mapper.Map(request, productFound);
+            await _productRepository.UpdateAsync(productFound);
             return Ok(productFound);
         }
     }

@@ -1,12 +1,15 @@
 ﻿namespace ToysAndGames.Model.Interfaces
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : BaseEntity
     {
         Task<T> CreateAsync(T entity);
 
+        Task<T> GetByIdAsync(int id);
+
         Task<T> UpdateAsync(T entity);
-     
+
         Task<IEnumerable<T>> GetAll();
-        Task DeleteAsync(int id);
+
+        Task DeleteAsync(T entity);
     }
 }

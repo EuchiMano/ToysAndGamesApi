@@ -12,8 +12,8 @@ using ToysAndGames.DataAccess.Data;
 namespace ToysAndGames.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220512181745_initial-create")]
-    partial class initialcreate
+    [Migration("20220523205911_inital-create")]
+    partial class initalcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace ToysAndGames.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ToysAndGames.Model.Product.Product", b =>
+            modelBuilder.Entity("ToysAndGames.Model.Products.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -44,6 +44,9 @@ namespace ToysAndGames.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -59,6 +62,33 @@ namespace ToysAndGames.DataAccess.Migrations
                     b.HasCheckConstraint("CK_Products_AgeRestriction", "[AgeRestriction] >= 0 AND [AgeRestriction] <= 100");
 
                     b.HasCheckConstraint("CK_Products_Price", "[Price] >= 1 AND [Price] <= 1000");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AgeRestriction = 12,
+                            Company = "Mattel",
+                            Description = "Lorem impsum...",
+                            Name = "Barbie Developer",
+                            Price = 25.99m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AgeRestriction = 4,
+                            Company = "Marvel",
+                            Name = "xyc",
+                            Price = 75.50m
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AgeRestriction = 18,
+                            Company = "Nintendo",
+                            Name = "abc",
+                            Price = 99.99m
+                        });
                 });
 #pragma warning restore 612, 618
         }
