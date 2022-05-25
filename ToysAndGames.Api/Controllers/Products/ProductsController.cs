@@ -19,7 +19,7 @@ namespace ToysAndGames.Api.Controllers.Products
         }
 
         [HttpPost("/api/[controller]/")]
-        public async Task<IActionResult> PostProduct([FromBody] CreateProductCommand request)
+        public async Task<IActionResult> CreateProductAsync([FromBody] CreateProductCommand request)
         {
             var newProduct = _mapper.Map(request, new Product());
             await _productRepository.CreateAsync(newProduct);
@@ -27,24 +27,24 @@ namespace ToysAndGames.Api.Controllers.Products
         }
 
         [HttpGet("/api/[controller]/")]
-        public async Task<IActionResult> GetProducts()
+        public async Task<IActionResult> GetProductsAsync()
         {
-            var productFound = await _productRepository.GetAll();
+            var productFound = await _productRepository.GetAllAsync();
             return Ok(productFound);
         }
 
         [HttpDelete("/api/[controller]/{productId}")]
-        public async Task<IActionResult> DeleteProductById([FromRoute] int productId)
+        public async Task<IActionResult> DeleteProductByIdAsync([FromRoute] int productId)
         {
             var productFound = await _productRepository.GetByIdAsync(productId);
-            if (productFound is null) return NotFound(productId);
+            if (productFound is null) return NotFound();
 
             await _productRepository.DeleteAsync(productFound);
             return NoContent();
         }
 
         [HttpPut("/api/[controller]")]
-        public async Task<IActionResult> UpdateProductById([FromBody] UpdateProductCommand request)
+        public async Task<IActionResult> UpdateProductByIdAsync([FromBody] UpdateProductCommand request)
         {
             var productFound = await _productRepository.GetByIdAsync(request.Id);
             if (productFound is null) return NotFound();

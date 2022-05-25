@@ -8,7 +8,7 @@
 
         Task<T> UpdateAsync(T entity);
 
-        Task<IEnumerable<T>> GetAll();
+        Task<IEnumerable<T>> GetAllAsync();
 
         Task DeleteAsync(T entity);
     }
